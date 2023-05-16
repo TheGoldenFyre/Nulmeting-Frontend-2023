@@ -1,13 +1,13 @@
 <template>
 <table>
   <tr>
-    <th class="table-left">Title</th>
-    <th>Content</th>
-    <th>Time</th>
+    <th>Verantwoordelijke</th>
+    <th>Omschrijving</th>
+    <th>Deadline</th>
   </tr>
   <tr v-for="todoItem in todoTable">
-    <td class="table-left">{{ todoItem.title }}</td>
-    <td>{{ todoItem.content }}</td>
+    <td>{{ todoItem.assignee }}</td>
+    <td>{{ todoItem.description }}</td>
     <td>{{ todoItem.dateTime.toLocaleString() }}</td>
   </tr>
 </table>
