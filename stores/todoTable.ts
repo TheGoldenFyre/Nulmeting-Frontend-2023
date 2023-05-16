@@ -19,6 +19,9 @@ export const useTodoTableStore = defineStore("todoTableStore", () => {
     };
       
     const todoTable = reactive([] as todoItem[]);
+    const containsItems = (): boolean => {
+        return todoTable.length > 0;
+    }
   
     const getNewItem = (): Promise<void> => {
         return new Promise((resolve, reject) => {
@@ -47,5 +50,5 @@ export const useTodoTableStore = defineStore("todoTableStore", () => {
         })
     }
   
-    return { todoTable, getNewItem };
+    return { todoTable, getNewItem, containsItems};
   });

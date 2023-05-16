@@ -7,7 +7,7 @@
         <p id="error-message" v-if="errorMessage != ''">{{ errorMessage }}</p>
         <br>
         <br>
-        <TodoTable></TodoTable>
+        <TodoTable v-if="todoTableStore.containsItems()"></TodoTable>
         
         <LevGlobalLoader v-if="loading"></LevGlobalLoader>
       </div>
