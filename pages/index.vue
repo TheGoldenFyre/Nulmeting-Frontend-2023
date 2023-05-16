@@ -2,13 +2,13 @@
   <div class="page-wrapper">
     <div class="element-wrapper">
       <div class="element-body">
-        <h1>Welkom bij de Levarne Nulmeting</h1>
+        <h1>Welkom bij de Levarne Nulmeting (<NuxtLink to="/about">Over ons</NuxtLink>)</h1>
         <LevButton @click="getNewTodoItem">Haal nieuwe taak op</LevButton>
         <p id="error-message" v-if="errorMessage != ''">{{ errorMessage }}</p>
         <br>
         <br>
         <TodoTable></TodoTable>
-        <NuxtLink to="/about">Over ons</NuxtLink>
+        
         <LevGlobalLoader v-if="loading"></LevGlobalLoader>
       </div>
     </div>
